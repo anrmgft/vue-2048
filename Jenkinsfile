@@ -10,7 +10,8 @@ pipeline {
                 //git branch: 'main', url: 'https://github.com/anrmgft/hello-springrest.git'
 
                 // Run Maven on a Unix agent.
-
+		
+		yarn "install"
                 yarn "build"
 
                 // To run Maven on a Windows agent, use
