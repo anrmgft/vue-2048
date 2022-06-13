@@ -1,0 +1,7 @@
+version: "3.0"
+services: 
+  vue:
+    image: vue-apache:latest
+    build: .
+    ports:
+      - "8080:8080" 
