@@ -1,6 +1,7 @@
 FROM node AS builder
 WORKDIR /vue
 COPY . ./
+RUN yarn install
 RUN yarn build
 
 FROM httpd
