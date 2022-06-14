@@ -4,6 +4,7 @@ pipeline {
         ansiColor('xterm')
         timestamps()
         disableConcurrentBuilds()
+        buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
     }
 
     stages {
