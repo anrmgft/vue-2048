@@ -52,8 +52,8 @@ pipeline {
                     }
                 }
             }
+        }
 
-        
         stage('Publish') {
             steps{
                 sshagent(['github-ssh']) {
