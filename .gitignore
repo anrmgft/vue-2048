@@ -1,0 +1,17 @@
+.idea
+*.iws
+*.iml
+*.ipr
+
+/nbproject/private/
+/nbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/main/**/build/
+
+.vscode
+
+/dist/

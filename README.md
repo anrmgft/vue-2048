@@ -23,3 +23,15 @@ yarn dev
 yarn build
 ```
 
+### Build the contenerized app 
+
+```bash
+docker-compose build
+```
+
+### Run the contenerized app (default port 3000)
+
+```bash
+docker-compose up
+```
+
