@@ -1,0 +1,809 @@
+    1  ll
+    2  ls
+    3  git config --global user.name "anrmgft"
+    4  git config --global user.email "anrm@gft.com"
+    5  git config --global core.editor nano
+    6  ll
+    7  ls
+    8  ls -l
+    9  ls -ls
+   10  ll
+   11  ls
+   12  ls - l
+   13  ls -l
+   14  git clone https://github.com/eficode-academy/git-katas.git
+   15  cd git-katas/
+   16  ls
+   17  ls -l
+   18  ll
+   19  ls
+   20  cd basic-commits/
+   21  ll
+   22  source setup.sh
+   23  git status
+   24  git log
+   25  touch hello.txt
+   26  date
+   27  date > hello.txt 
+   28  cat hello.txt 
+   29  ls
+   30  ll
+   31  git status
+   32  git add hello.txt 
+   33  git status
+   34  git log
+   35  git commit
+   36  git status
+   37  nano hello.txt 
+   38  git status
+   39  git add hello.txt 
+   40  git status
+   41  nano hello.txt 
+   42  git commit hello.txt 
+   43  git status
+   44  git log
+   45  git status
+   46  git add hello.txt 
+   47  git commit hello.txt 
+   48  git status
+   49  git log
+   50  git blame hello.txt
+   51  docker
+   52  docker run --rm hello-world
+   53  docker run -it ubuntu bash
+   54  docker image
+   55  docker images
+   56  docker ps
+   57  ip -c a
+   58  docker images 
+   59  docker ps
+   60  docker run --rm hola-docker
+   61  docker ps
+   62  docker images
+   63  ip -c a
+   64  ip addr
+   65  docker network ls
+   66  docker network ps
+   67  docker network 
+   68  docker network ls
+   69  docker ps
+   70  mkdir hola-docker
+   71  cd hola-docker/
+   72  touch Dockerfile
+   73  nano Dockerfile 
+   74  docker build .
+   75  docker build -t hola-docker:latest .
+   76  docker images 
+   77  docker run it --rm -p 80:80 hola-docker 
+   78  docker run -it --rm -p 80:80 hola-docker 
+   79  docker images 
+   80  docker build -t hola-docker:latest .
+   81  docker run -it --rm -p 80:80 hola-docker 
+   82  docker run --rm hello-world
+   83  docker images 
+   84  docker ps
+   85  docker run -it --rm hello-world
+   86  docker images 
+   87  docker run --rm hola-docker
+   88  cd robobar-example/
+   89  cd node_modules/
+   90  ll
+   91  cd ..
+   92  cat package-lock.json 
+   93  du -sh node_modules/
+   94  docker images 
+   95  docker ps
+   96  docker kill nice_haibt 
+   97  git clone https://github.com/anrmgft/hola-docker.git
+   98  git init 
+   99  cd hola-docker/
+  100  git init
+  101  git add Dockerfile 
+  102  git commit -m "first commit"
+  103  git status
+  104  git push
+  105  git remote add origin https://github.com/anrmgft/hola-docker.git
+  106  git push -u origin main
+  107  git status
+  108  git branch -M main
+  109  git remote add origin https://github.com/anrmgft/hola-docker.git
+  110  git status
+  111  git push
+  112  cd ..
+  113  cd hola-docker/
+  114  git clone https://github.com/anrmgft/hola-docker.git
+  115  cd hola-docker/
+  116  git add Dockerfile 
+  117  git commit -m "hola"
+  118  git push
+  119  git log
+  120  git blame 
+  121  git blame Dockerfile
+  122  docker images 
+  123  docker ps
+  124  ll
+  125  ls
+  126  ll
+  127  cat .git/config 
+  128  cd
+  129  node 
+  130  node --version
+  131  git clone https://github.com/devops-summer22/robobar-example.git
+  132  ll
+  133  cd robobar-example/
+  134  npm install
+  135  npm --help
+  136  npm run start
+  137  cd robobar-example/
+  138  cat package.json 
+  139  node --version
+  140  cd 
+  141  cd robobar-example/
+  142  nano Dockerfile
+  143  ll
+  144  nano Dockerfile
+  145  docker run -it --rm -p 3000:3000 robobar:latest
+  146  nano Dockerfile
+  147  docker build -t robobar:latest
+  148  docker build -t robobar:latest .
+  149  docker run -it --rm -p 3000:3000 robobar:latest
+  150  docker run -it --rm -p 3000:3000 robobar:latest bash
+  151  nano .dockerignore
+  152  docker build -t robobar:latest .
+  153  docker run -it --rm -p 3000:3000 robobar:latest bash
+  154  cat Dockerfile 
+  155  cat .dockerignore 
+  156  docker images 
+  157  docker ps
+  158  history
+  159  docker images 
+  160  docker --help
+  161  cd 
+  162  nano hello-groovy
+  163  mkdir hello-groovy
+  164  cd hello-groovy/
+  165  spring run hello.groovy 
+  166  cd 
+  167  cd Desktop/
+  168  touch token
+  169  ./mvnw spring-boot:run
+  170  cd demo/
+  171  ll
+  172  ./mvnw spring-boot:run
+  173  java -version
+  174  cd 
+  175  cd ./m2
+  176  ll
+  177  cd .m2/repository/
+  178  ll
+  179  cd 
+  180  git clone https://github.com/anrmgft/hello-springrest.git
+  181  cd hello-springrest/
+  182  ll
+  183  ./gradlew bootRun
+  184  cd rest-service/
+  185  ./gradlew bootRun
+  186  cd robobar-example/
+  187  ll
+  188  cat .gitignore 
+  189  cd 
+  190  cd hello-groovy/
+  191  spring jar hello.groovy.jar
+  192  spring jar hello.groovy.jar hello.groovy 
+  193  ll
+  194  java -j hello.groovy.jar 
+  195  java -jar hello.groovy.jar 
+  196  cd 
+  197  git clone https://github.com/anrmgft/hello-spring.git
+  198  cd hello-spring/
+  199  ll
+  200  git add .
+  201  git status
+  202  git commit -m "Spring 1.0"
+  203  git push
+  204  git add demo/pom.xml 
+  205  git commit demo/pom.xml 
+  206  git push
+  207  cd 
+  208  cd hello-springrest/
+  209  git add .
+  210  git status 
+  211  git commit -m "Restful"
+  212  git push 
+  213  cd rest-service/
+  214  ll
+  215  cat ./gradlew
+  216  ./gradlew assemble
+  217  ll
+  218  cd build/
+  219  ll
+  220  cd ..
+  221  ll build
+  222  ll build/classes/java/
+  223  tree build/classes/java
+  224  tree build/classes/java/
+  225  ll build/libs/
+  226  cd ..
+  227  nano Dockerfile
+  228  docker build -t spring:latest .
+  229  nano Dockerfile
+  230  docker build -t spring:latest .
+  231  ll
+  232  cd rest-service/
+  233  docker build -t spring:latest .
+  234  docker image
+  235  docker images
+  236  docker run -d -rm 8080:8080 spring:latest 
+  237  docker run -d --rm 8080:8080 spring:latest 
+  238  docker run -p --rm 8080:8080 spring:latest 
+  239  docker run -d --rm -p 8080:8080 spring:latest 
+  240  docker run -d --rm -p 8080:8080 
+  241  docker run -d --rm -p 8080:8080 spring:latest 
+  242  nano Dockerfile 
+  243  docker run -d --rm -p 8080:8080 spring
+  244  nano Dockerfile 
+  245  java --version
+  246  nano Dockerfile 
+  247  docker build -t spring:latest .
+  248  docker run -d --rm -p 8080:8080 spring
+  249  nano Dockerfile 
+  250  docker build -t spring:latest .
+  251  docker run -d --rm -p 8080:8080 spring
+  252  docker run -t --rm -p 8080:8080 spring
+  253  cd rest-service/
+  254  ./mvnw spring-boot:run
+  255  ll
+  256  ./gradlew bootRun
+  257  cd hello-springrest/
+  258  ll
+  259  cd rest-service/
+  260  ll
+  261  ./mvnw spring-boot:run
+  262  ./gradlew bootRun
+  263  clear
+  264  nano Dockerfile 
+  265  ll
+  266  nano Dockerfile 
+  267  cd build/
+  268  ll
+  269  cd libs/
+  270  ll
+  271  cd ..
+  272  nano Dockerfile 
+  273  docker build -t spring:latest .
+  274  docker run -d --rm -p 8080:8080 spring
+  275  docker run -d --rm -p 8080:8080 spring:latest 
+  276  docker images
+  277  docker run -d --rm -p 8080:8080 spring
+  278  docker run -d --rm -p 8080:8080 spring:latest 
+  279  ./gradlew bootRun
+  280  docker images
+  281  docker logs
+  282  docker container logs
+  283  docker container logs tender_wing 
+  284  docker rm -f clever_dhawan 
+  285  docker rm -f jovial_shirley 
+  286  docker rm -f tender_wing 
+  287  docker images
+  288  docker run -d --rm -p 8080:8080 spring
+  289  docker container logs nice_archimedes 
+  290  docker run -t --rm -p 8080:8080 spring
+  291  docker container logs nice_archimedes 
+  292  docker run -t --rm -p 8080:8080 spring
+  293  docker images 
+  294  cat Dockerfile 
+  295  cd hello-springrest/
+  296  cd rest-service/
+  297  cat Dockerfile 
+  298  nano Dockerfile 
+  299  docker build -t spring:latest .
+  300  docker run -t --rm -p 8080:8080 spring
+  301  docker kill cranky_kare 
+  302  docker --help 
+  303  docker - t--help 
+  304  docker -t --help 
+  305  docker ps
+  306  docker images
+  307  history
+  308  ps auxww
+  309  ps
+  310  du -a
+  311  cd hello-springrest/
+  312  du -a
+  313  du -sh
+  314  du -sh rest-service/.gitignore 
+  315  docker logs stupefied_zhukovsky 
+  316  git add .
+  317  git commit -m "Fix it"
+  318  git push
+  319  git diff
+  320  docker images
+  321  cd rest-service/
+  322  nano Dockerfile 
+  323  docker build -t spring:latest .
+  324  docker run -t --rm -p 8080:8080 spring
+  325  docker run -it --rm -p 8080:8080 spring
+  326  docker images
+  327  docker run -it --rm -p 8080:8080 spring
+  328  docker ps
+  329  docker kill stupefied_zhukovsky 
+  330  docker run -it --rm -p 8080:8080 spring
+  331  cd 
+  332  cd hello-springrest/
+  333  git add .
+  334  diff
+  335  git diff
+  336  git diff main 
+  337  git commit -m "Slim Buster"
+  338  git push 
+  339  cd rest-service/
+  340  nano Dockerfile 
+  341  docker build -t spring:latest .
+  342  nano Dockerfile 
+  343  docker build -t spring:latest .
+  344  nano Dockerfile 
+  345  docker build -t spring:latest .
+  346  ll
+  347  docker run -it --rm -p 8080:8080 spring
+  348  docker run -it --rm spring
+  349  docker run -it --rm -p 8080:8080 spring
+  350  ll
+  351  touch README.md
+  352  echo docker run -it --rm -p 8080:8080 spring > README.md 
+  353  cat README.md 
+  354  nano README.md 
+  355  git diff
+  356  nano README.md 
+  357  git diff
+  358  cd 
+  359  clear
+  360  docker-compose version
+  361  docker-compose --help
+  362  cd rest-service/
+  363  nano docker-compose.yml
+  364  docker-compose images
+  365  docker-compose ps
+  366  docker-compose up
+  367  nano docker-compose.yml
+  368  docker images
+  369  docker ps
+  370  docker-compose up
+  371  docker build -t spring:latest .
+  372  nano docker-compose.yml
+  373  docker-compose up
+  374  docker-compose images
+  375  cd ..
+  376  git add .
+  377  git commit -m "docker-compose"
+  378  git push
+  379  ll
+  380  nano README.md 
+  381  git ad 
+  382  git dif
+  383  git diff
+  384  git add .
+  385  git commit -m "readme docker-compose"
+  386  git push
+  387  cd rest-service/
+  388  ./gradlew build
+  389  ./gradlew boot run
+  390  ./gradlew bootRun
+  391  ll
+  392  history
+  393  docker-compose -ps
+  394  docker-compose ps
+  395  ./gradlew bootRun
+  396  docker ps
+  397  docker images
+  398  docker ps
+  399  docker-compose ps
+  400  docker-compose images
+  401  cd hello-springrest/
+  402  cd rest-service/
+  403  docker-compose ps
+  404  docker-compose images
+  405  nano docker-compose.yml 
+  406  docker-compose build
+  407  docker-compose up
+  408  cd 
+  409  cd /var/lib/jenkins/secrets/
+  410  sudo cd /var/lib/jenkins/secrets
+  411  sudo cd var/lib/jenkins/secrets
+  412  sudo cd /var/lib/jenkins/secrets
+  413  cd /var/lib/
+  414  cd jenkins/
+  415  ll
+  416  cd secrets/
+  417  ll
+  418  cd secrets/
+  419  sudo cd secrets/
+  420  sudo -s
+  421  cd 
+  422  cd hello-springrest/
+  423  ll
+  424  cd rest-service/
+  425  ll
+  426  cd build
+  427  ll
+  428  history
+  429  cd 
+  430  histroy | grep Snap
+  431  history | grep Snap
+  432  history | grep SNAPSHOT
+  433  cd hello-springrest/
+  434  cd rest-service/
+  435  ll
+  436  history
+  437  history | grep jar
+  438  cd build/
+  439  ll
+  440  cd libs/
+  441  ll
+  442  cd ..
+  443  cat Dockerfile 
+  444  ./gradlew test
+  445  ll
+  446  cd build/
+  447  ll
+  448  cd test-results/
+  449  ll
+  450  cd ..
+  451  cd Downloads/
+  452  ll
+  453  cd 
+  454  cd idea-IU-221.5787.30/
+  455  bin/idea.sh 
+  456  cd vue
+  457  cd vue-2048/
+  458  ll
+  459  yarn build
+  460  ll
+  461  touch Dockerfile
+  462  nano Dockerfile 
+  463  cdd
+  464  cd 
+  465  cd hello-groovy/
+  466  ll
+  467  cd 
+  468  cd hello-spring 
+  469  ll
+  470  cd demo/
+  471  ll
+  472  cd 
+  473  cd vue-2048/
+  474  history
+  475  history | grep buid 
+  476  docker build -t my-apache2 .
+  477  nano Dockerfile 
+  478  docker build -t my-apache2 .
+  479  docker images 
+  480  docker ps
+  481  docker images
+  482  docker run -dit --name my-running-app -p 8080:80 my-apache2
+  483  history | grep kill
+  484  docker images 
+  485  docker ps
+  486  docker kill my-running-app 
+  487  nano Dockerfile 
+  488  docker build -t my-apache2 .
+  489  nano Dockerfile 
+  490  history 
+  491  history | grep Dockerfile
+  492  history | grep compose
+  493  docker build -t my-apache2 .
+  494  nano Dockerfile 
+  495  docker build -t my-apache2 .
+  496  docker run -dit --name my-running-app -p 8080:80 my-apache2
+  497  docker ps 
+  498  docker run -dit -p 8080:80 my-apache2
+  499  docker ps 
+  500  docker kill thirsty_perlman
+  501  nano docker-compose.yml
+  502  git add .
+  503  git commit -m "Dockerfile y compose"
+  504  git push
+  505  nano Jenkinsfile
+  506  git add .
+  507  git commit -m "Jenkinsfile"
+  508  git push
+  509  docker-compose up
+  510  nano Dockerfile 
+  511  docker-build 
+  512  docker-compose build
+  513  nano Dockerfile 
+  514  docker-compose build
+  515  docker-compose up
+  516  nano Dockerfile 
+  517  docker-compose build
+  518  docker-compose up
+  519  docker ps
+  520  dokcer image
+  521  dokcer images
+  522  dockcer images
+  523  docker images 
+  524  cat Dockerfile 
+  525  docker-compose build
+  526  docker-compose up
+  527  nano docker-compose.yml 
+  528  docker-compose build
+  529  docker-compose up
+  530  git add .
+  531  git commit -m
+  532  git commit -m "gitcompose Bien"
+  533  git push
+  534  git add .
+  535  git commit -m "Jenkins fix"
+  536  git push
+  537  nano Jenkinsfile 
+  538  git add .
+  539  git commit -m "rimraf"
+  540  git push
+  541  nano Jenkinsfile 
+  542  ll
+  543  rm -r node_modules/
+  544  ll
+  545  yarn install
+  546  ll
+  547  rm -r node_modules/
+  548  git add .
+  549  git status 
+  550  git commit -m "delete rimraf"
+  551  git push
+  552  nano Jenkinsfile 
+  553  nano Dockerfile 
+  554  nano Jenkinsfile 
+  555  git add .
+  556  git commit -m "jenkins sh compose build"
+  557  git push
+  558  ll
+  559  touch .gitignore
+  560  nano .gitignore 
+  561  docker ps
+  562  docker exec vue-2048_vue_1 
+  563  docker exec -h
+  564  docker exec -it vue-2048_vue_1 
+  565  docker exec -it vue-2048_vue_1 sh
+  566  clear
+  567  docker exec -it vue-2048_vue_1 sh
+  568  git clone git@github.com:anrmgft/pipeline-library-demo.git
+  569  cd pipeline-library-demo/
+  570  ll
+  571  git add .
+  572  git commit -m "First Commit"
+  573  git push
+  574  ll
+  575  cat Jenkinsfile.demo 
+  576  ll
+  577  cd vars/
+  578  ll
+  579  cat sayHello.groovy 
+  580  cd ..
+  581  ll
+  582  cat Jenkinsfile.demo 
+  583  ll
+  584  cd vars/
+  585  ll
+  586  cat sayHello.groovy 
+  587  l
+  588  cd hello-spring
+  589  cd 
+  590  cd hello-springrest/
+  591  cd rest-service/
+  592  cd build/
+  593  ll
+  594  cd test-results/
+  595  ll
+  596  cd test/
+  597  ll
+  598  cd ..
+  599  ll
+  600  cd
+  601  cd Downloads/
+  602  ll
+  603  cd 
+  604  tar -ztvf Downloads/ideaIU-2022.1.2.tar.gz 
+  605  ll
+  606  tar -zxvf Downloads/ideaIU-2022.1.2.tar.gz 
+  607  ll
+  608  cd hello-springrest/
+  609  ll
+  610  git status 
+  611  ll
+  612  man git tag
+  613  cd rest-service/
+  614  ll
+  615  cat Dockerfile 
+  616  clear
+  617  cd
+  618  ssh-keygen -t rsa -b 4096 -C "anrm@gft.com"
+  619  ssh -T git@github.com
+  620  ll
+  621  cd ..
+  622  cd sinensia/
+  623  ll
+  624  cd .ssh/
+  625  ll
+  626  cat id_rsa.pub 
+  627  cd 
+  628  ssh -T git@github.com
+  629  ssh git@github.com
+  630  cd sinensia/
+  631  ll
+  632  cd ..
+  633  cd sinensia/
+  634  ll
+  635  cd .ssh/
+  636  ll
+  637  cat id_rsa
+  638  cd ..
+  639  git clone git@github.com:anrmgft/vue-2048.git
+  640  yarn
+  641  cd vue-2048/
+  642  yarn
+  643  git add .
+  644  git commit -m "Primer push"
+  645  git push
+  646  yarn dev
+  647  cd 
+  648  cd hello-springrest/
+  649  ll
+  650  cd rest-service/
+  651  ll
+  652  cat Dockerfile 
+  653  ll
+  654  cat docker-compose.yml 
+  655  cat Jenkinsfile 
+  656  cd 
+  657  docker sh --help 
+  658  cd vue-2048/
+  659  docker-compose up
+  660  cd Desktop/
+  661  ll
+  662  touch triangleCasosDeUso
+  663  git clone git@github.com:anrmgft/testing-web.git
+  664  ll
+  665  cd testing-web/
+  666  ll
+  667  git add .
+  668  git commit "First commmit"
+  669  git commit -m "First commmit"
+  670  git push
+  671  ll
+  672  ./gradlew 
+  673  git add .
+  674  git commit -m "Gradle Version"
+  675  git push
+  676  ./gradlew assemble
+  677  docker ps 
+  678  ./gradlew run
+  679  ./gradlew 
+  680  run gradlew 
+  681  run gradlew --help
+  682  gradlew --help
+  683  gradle --help
+  684  ./gradlew test
+  685  git add .
+  686  git commit -m "Faild 1 Test"
+  687  git push
+  688  ./gradlew test
+  689  git add .
+  690  git commit -m "Fix it @WebMvcTest(HomeController.class)"
+  691  git push
+  692  history
+  693  history | grep jar
+  694  ll
+  695  nano Dockerfile
+  696  history | compose
+  697  history | grep compose
+  698  nano docker-compose.yml
+  699  nano Dockerfile
+  700  nano docker-compose.yml
+  701  docker-compose build
+  702  history | grep build
+  703  ./gradlew build
+  704  cd build/
+  705  ll
+  706  cd libs/
+  707  ll
+  708  cd ..
+  709  docker-compose build
+  710  ll
+  711  cd buid
+  712  cd build/libs/
+  713  ll
+  714  cd ..
+  715  nano Dockerfile 
+  716  git add .
+  717  git commit -m "docker-compose"
+  718  git push
+  719  ll
+  720  touch Jenkinsfile
+  721  cat Jenkinsfile 
+  722  git add .
+  723  git commit -m "Jenkinsfile added"
+  724  git push 
+  725  ./gradlew test
+  726  cat Jenkinsfile 
+  727  git add .
+  728  git commit -m "Xml path jUnit"
+  729  git push
+  730  git add .
+  731  git commit -m "Fix Jenkinsfile 1.0"
+  732  git push
+  733  git add .
+  734  git commit -m "Deleting One Testing"
+  735  git push
+  736  docker ps
+  737  git add .
+  738  git commit -m "PMD V.4"
+  739  git push
+  740  git add .
+  741  git commit -m "PMD V.5"
+  742  git push
+  743  ./gradlew pitest
+  744  apply plugin: 'info.solidsoft.pitest'
+  745  ./gradlew apply plugin: 'info.solidsoft.pitest'
+  746  ./gradlew pitest
+  747  cd testing-web/
+  748  git add .
+  749  git commit -m "More test for HomeController"
+  750  git push
+  751  history | grep html
+  752  git add .
+  753  git commit -m "Fixed grammar error in httprequest "
+  754  git push
+  755  git add .
+  756  git commit -m "Jacoco"
+  757  git push
+  758  git add .
+  759  git commit -m "Jacoco V.1"
+  760  git push
+  761  git add .
+  762  git commit -m "Jacoco V.2"
+  763  git push
+  764  git add .
+  765  git commit -m "Jacoco V.3"
+  766  git push
+  767  git add .
+  768  git commit -m "PMD V.0"
+  769  git push
+  770  git add .
+  771  git commit -m "PMD V.1"
+  772  git push
+  773  pmdteeeest
+  774  pmdtest
+  775  ./gradlew check
+  776  cd robobar-example/
+  777  cd
+  778  cd Downloads/
+  779  cd robobar-test
+  780  ll
+  781  npm install -g mocha
+  782  npm install selenium-webdriver
+  783  ll
+  784  cd
+  785  ll
+  786  cd Downloads/
+  787  cd robobar-test/
+  788  ls
+  789  npm install selenium-webdriver
+  790  touch package.json
+  791  ll
+  792  npm install selenium-webdriver
+  793  npm init 
+  794  npm install selenium-webdriver
+  795  ll
+  796  mocha 
+  797  nodeenv rehash
+  798  nodenv rehash
+  799  mocha 
+  800  mocha defaultSuite.spec.js 
+  801  history
+  802  cd 
+  803  cd vue-2048/
+  804  histroy > terminalhistory.txt
+  805  echo history
+  806  ll
+  807  touch history_sinensia_terminal.txt
+  808  histroy > history_sinensia_terminal.txt 
+  809  history > history_sinensia_terminal.txt 
