@@ -1,5 +1,11 @@
 pipeline {
     agent any
+	options {
+        ansiColor('xterm')
+        timestamps()
+        disableConcurrentBuilds()
+        buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
+    }
 
     stages {
         stage('Build') {
@@ -24,10 +30,11 @@ pipeline {
                     recordIssues(tools: [trivy(pattern: 'result.json')])
                 }
             }
-            
+
         }
 
-
+            
+        }
         stage('Publish') {
             steps{
                 sshagent(['github-ssh']) {
