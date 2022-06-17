@@ -8,6 +8,18 @@ pipeline {
     }
 
     stages {
+        stage('Trivy'){
+                  steps{
+                    sh 'trivy fs -f json -o results.json .'
+                  }
+                   post {
+                          // If Gradle was able to run the tests, even if some of the test
+                          // failed, record the test results and archive the jar file.
+                          success {
+                              recordIssues(tools: [trivy(pattern: 'result.json')])
+                          }
+                      }
+                     }
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
@@ -17,23 +29,12 @@ pipeline {
 		
 		//yarn "install"
                 //yarn "build"
-        sh "trivy fs -f json -o result.json ."
+
 		sh "docker-compose build"
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
-            post {
-                // If Gradle was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
-                success {
-                    recordIssues(tools: [trivy(pattern: 'result.json')])
-                }
-            }
-
-
-
-            
         }
         stage('Publish') {
             steps{
