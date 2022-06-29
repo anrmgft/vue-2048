@@ -63,7 +63,7 @@ pipeline {
                             sh 'git push --tags'
                 }
                 sh 'echo $dockerhub_PSW | docker login -u anrmgft --password-stdin'
-                sh 'docker push anrmgft/2048:tagname '
+                sh 'docker push anrmgft/2048:latest '
             }
         }
     }
