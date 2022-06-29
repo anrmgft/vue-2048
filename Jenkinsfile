@@ -63,9 +63,9 @@ pipeline {
                             sh 'git tag BUILD-1.0.${BUILD_NUMBER}'
                             sh 'git push --tags'
                 }
-                sh 'docker tag 2048-img:101 anrmgft/2048:latest'
+                sh 'docker tag anrmgft/2048:latest anrmgft/2048:1.01'
                 sh 'echo $dockerhub_PSW | docker login -u anrmgft --password-stdin'
-                sh 'docker push anrmgft/2048:latest '
+                sh 'docker push anrmgft/2048:1.01 '
             }
         }
     }
