@@ -72,7 +72,7 @@ pipeline {
             steps{
                 withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'pass', usernameVariable: 'user')]) {
                    sh "echo '${pass}' | docker login ghcr.io -u anrmgft --password-stdin"
-                   sh 'docker push anrmgft/2048:1.01 '
+                   sh 'docker push ghcr.io/anrmgft/2048:1.01 '
                 }
 
 
