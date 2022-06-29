@@ -45,7 +45,7 @@ pipeline {
                 }
                 stage('Trivy Image') {
                     steps {
-                        sh 'trivy image -f json -o results.json vue2048'
+                        sh 'trivy image -f json -o results.json 2048'
                     }
                     post {
                       success {
