@@ -9,6 +9,7 @@ pipeline {
     environment {
         dockerhub=credentials('dockerhub')
     }
+
     stages {
 
         stage('Build') {
@@ -45,7 +46,7 @@ pipeline {
                 }
                 stage('Trivy Image') {
                     steps {
-                        sh 'trivy image -f json -o results.json 2048'
+                        sh 'trivy image -f json -o results.json anrmgft/2048'
                     }
                     post {
                       success {
@@ -62,6 +63,7 @@ pipeline {
                             sh 'git tag BUILD-1.0.${BUILD_NUMBER}'
                             sh 'git push --tags'
                 }
+                sh 'docker tag 2048-img:101 anrmgft/2048:latest'
                 sh 'echo $dockerhub_PSW | docker login -u anrmgft --password-stdin'
                 sh 'docker push anrmgft/2048:latest '
             }
