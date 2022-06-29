@@ -6,7 +6,9 @@ pipeline {
         disableConcurrentBuilds()
         buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
     }
-
+    environment {
+        dockerhub=credentials('dockerhub')
+    }
     stages {
 
         stage('Build') {
@@ -60,6 +62,8 @@ pipeline {
                             sh 'git tag BUILD-1.0.${BUILD_NUMBER}'
                             sh 'git push --tags'
                 }
+                sh 'echo $dockerhub_PSW | docker login -u anrmgft --password-stdin'
+                sh 'docker push anrmgft/2048:tagname '
             }
         }
     }
