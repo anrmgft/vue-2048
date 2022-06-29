@@ -68,5 +68,16 @@ pipeline {
                 sh 'docker push anrmgft/2048:1.01 '
             }
         }
+        stage('Registry') {
+            steps{
+                withCredentials([string(credentialsId: 'github', variable: '')]) {
+                   sh 'echo '${github}' | docker login ghcr.io -u anrmgft --password-stdin'
+                   sh 'docker push anrmgft/2048:1.01 '
+                }
+
+
+            }
+        }
+
     }
 }
