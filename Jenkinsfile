@@ -72,9 +72,9 @@ pipeline {
         stage('Registry') {
             steps{
                 withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'pass', usernameVariable: 'user')]) {
-                   sh 'docker tag ghcr.io/anrmgft/2048:latest ghcr.io/anrmgft/2048:1.01'
+                   sh 'docker tag ghcr.io/anrmgft/2048:latest ghcr.io/anrmgft/2048:1.0.${BUILD_NUMBER} '
                    sh "echo '${pass}' | docker login ghcr.io -u anrmgft --password-stdin"
-                   sh 'docker push ghcr.io/anrmgft/2048:1.01 '
+                   sh 'docker push ghcr.io/anrmgft/2048:1.0.${BUILD_NUMBER} '
                 }
 
 
