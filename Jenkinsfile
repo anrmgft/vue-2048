@@ -63,16 +63,17 @@ pipeline {
                             sh 'git tag BUILD-1.0.${BUILD_NUMBER}'
                             sh 'git push --tags'
                 }
-                sh 'docker tag anrmgft/2048:latest anrmgft/2048:1.01'
+                //sh 'docker tag anrmgft/2048:latest anrmgft/2048:1.01'
                 sh 'echo $dockerhub_PSW | docker login -u anrmgft --password-stdin'
-                sh 'docker push anrmgft/2048:1.01 '
+                //sh 'docker push anrmgft/2048:1.01 '
+                sh 'docker push anrmgft/2048:latest '
             }
         }
         stage('Registry') {
             steps{
                 withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'pass', usernameVariable: 'user')]) {
                    sh "echo '${pass}' | docker login ghcr.io -u anrmgft --password-stdin"
-                   sh 'docker push ghcr.io/anrmgft/2048:1.01 '
+                   sh 'docker push ghcr.io/anrmgft/2048:latest '
                 }
 
 
