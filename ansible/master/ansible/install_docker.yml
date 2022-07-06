@@ -28,7 +28,7 @@
       
     - name: Tear down existing services
       copy:
-        src: ~/vue-2048/docker-compose.yml
+        src: docker-compose.yml
         dest: /home/ec2-user
     - name:
       shell: /usr/local/bin/docker-compose up -d --no-build
