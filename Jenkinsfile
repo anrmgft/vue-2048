@@ -20,15 +20,7 @@ pipeline {
                        
                     }
         }
-        stage('Deploy') {
-                    steps {
-
-                sh "scp -i ./docker-compose.yml ec2-user@3.248.181.69:/home/ec2-user"      
-                sh "ssh ec2-user@3.248.181.69 /usr/local/bin/docker-compose up -d --no-build"
-
-                       
-                    }
-        }
+       
         
 
         stage('Publish') {
@@ -51,8 +43,18 @@ pipeline {
                    sh 'docker push ghcr.io/anrmgft/2048:1.0.${BUILD_NUMBER} '
                 }
 
-
             }
+        }
+        stage('Deploy') {
+                    steps {
+
+                withAWS(credentials:'AKIAWWTGRM4ZMCKRXNSF') {
+                    sh 'ansible-playbook -i inventory /ansible/master/ansible/install_docker.yml'
+                }            
+                
+
+                       
+                    }
         }
 
     }

@@ -1,0 +1,37 @@
+---
+- hosts: web
+  become: true
+  tasks:
+    - name: Install Docker http
+      yum: name=docker state=present update_cache=yes
+      
+    - name: Service
+      vars:
+        ansible_user: ec2-user
+      service:
+        name: docker
+        state: started
+        enabled: yes
+      
+    - name: Install docker-compose from official github repo
+      vars:
+        ansible_user: ec2-user
+      get_url:
+        url : https://github.com/docker/compose/releases/download/v2.6.1/docker-compose-linux-x86_64
+        dest: /usr/local/bin/docker-compose
+        owner: ec2-user
+        mode: "0500"
+    - name: Added a consultant whose account you want to expire
+      user:
+        name: ec2-user
+        groups: docker
+      
+    - name: Tear down existing services
+      copy:
+        src: ~/vue-2048/docker-compose.yml
+        dest: /home/ec2-user
+    - name:
+      shell: /usr/local/bin/docker-compose up -d --no-build
+
+     
+      

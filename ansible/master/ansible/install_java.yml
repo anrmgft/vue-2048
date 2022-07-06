@@ -1,0 +1,21 @@
+---
+- name: install java
+  yum: pkg=java-11-amazon-corretto-headless.x86_64 state=present update_cache=no
+- name: Clone a repo with separate git directory
+  copy:
+    src: ~/hello-springrest/rest-service/build/libs/rest-service-0.0.1-SNAPSHOT.jar
+    dest: /home/ec2-user
+- name: Create two hard links
+  file:
+    src: /home/ec2-user/rest-service-0.0.1-SNAPSHOT.jar
+    dest: /etc/init.d/springrest
+    state: link
+    owner: ec2-user
+    mode: "0500"
+- name: Service
+  vars:
+    ansible_user: ec2-user
+  sysvinit:
+    name: springrest
+    state: started
+    enabled: yes

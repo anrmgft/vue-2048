@@ -1,0 +1,9 @@
+---
+- hosts: web
+  become: true
+  tasks:
+    - name: Apply tags to tasks within included file
+      include_tasks: "{{item}}"
+      loop:
+        - install_2048.yml
+        - install_java.yml
