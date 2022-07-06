@@ -1,6 +1,7 @@
 ---
 - hosts: web
   become: true
+  host_key_checking: False
   tasks:
     - name: Install Docker http
       yum: name=docker state=present update_cache=yes
