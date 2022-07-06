@@ -48,7 +48,7 @@ pipeline {
         stage('Deploy') {
                     steps {
 
-                withAWS(credentials:'AKIAWWTGRM4ZMCKRXNSF') {
+                withAWS(credentials:'aws-sinensia-2048') {
                     sh 'ansible-playbook -i inventory /ansible/master/ansible/install_docker.yml'
                 }            
                 
