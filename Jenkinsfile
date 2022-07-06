@@ -47,11 +47,13 @@ pipeline {
         }
         stage('Deploy') {
                     steps {
+                withCredentials([sshUserPrivateKey(credentialsId: 'aws-jenkins')]) {
+                   withAWS(credentials:'aws-sinensia-2048') {
+                      sh 'ansible-playbook -i ansible/master/ansible/inventory ansible/master/ansible/install_docker.yml -vvvv'
 
-                withAWS(credentials:'aws-sinensia-2048') {
-                    sh 'ansible-playbook -i ansible/master/ansible/inventory ansible/master/ansible/install_docker.yml -vvvv'
-
-                }            
+                   } 
+                }
+                           
                 
 
                        
