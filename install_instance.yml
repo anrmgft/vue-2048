@@ -53,3 +53,6 @@
       copy:
         src: ~/vue-2048/dist/
         dest: /var/www/html 
+        
+    - name: Include task Docker up
+      include_tasks: install_docker.yml

@@ -1,7 +1,7 @@
----
-- hosts: web
-  become: true
-  tasks:
+#---
+#- hosts: web
+#  become: true
+#  tasks:
     - name: Install Docker http
       yum: name=docker state=present update_cache=yes
       
@@ -21,17 +21,26 @@
         dest: /usr/local/bin/docker-compose
         owner: ec2-user
         mode: "0500"
-    - name: Added a consultant whose account you want to expire
-      user:
-        name: ec2-user
-        groups: docker
-      
+        
+    #- name: Added a consultant whose account you want to expire
+    #  user:
+    #    name: ec2-user
+    #    groups: docker
+    
+    - name: Symlink for docker-compose
+      file:
+        src: /usr/local/bin/docker-compose
+        dest: /usr/bin/docker-compose
+        state: link
+        owner: ec2-user
+        mode: '0755'
+        
     - name: Tear down existing services
       copy:
         src: docker-compose.yml
         dest: /home/ec2-user
     - name:
-      shell: /home/ec2-user/docker-compose up -d --no-build
+      shell: docker-compose -f /home/ec2-user/docker-compose.yml up -d --no-build
 
      
       
