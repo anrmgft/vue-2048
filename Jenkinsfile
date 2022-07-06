@@ -30,9 +30,9 @@ pipeline {
                             sh 'git push --tags'
                 }
                 //sh 'docker tag anrmgft/2048:latest anrmgft/2048:1.01'
-                sh 'echo $dockerhub_PSW | docker login -u anrmgft --password-stdin'
+               // sh 'echo $dockerhub_PSW | docker login -u anrmgft --password-stdin'
                 //sh 'docker push anrmgft/2048:1.01 '
-                sh 'docker push anrmgft/2048:latest '
+               // sh 'docker push anrmgft/2048:latest '
             }
         }
         stage('Registry') {
@@ -47,7 +47,7 @@ pipeline {
         }
         stage('Deploy') {
                     steps {
-                withCredentials([sshUserPrivateKey(credentialsId: 'aws-jenkins')]) {
+                sshagent(['aws-jenkins']) {
                    withAWS(credentials:'aws-sinensia-2048') {
                       sh 'ansible-playbook -i ansible/master/ansible/inventory ansible/master/ansible/install_docker.yml -vvvv'
 
