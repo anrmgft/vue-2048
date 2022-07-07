@@ -10,5 +10,5 @@
       become: true
     - name: Clone a repo with separate git directory
       copy:
-        src: ~/vue-2048/dist/
+        src: /dist/
         dest: /var/www/html 
