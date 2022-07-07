@@ -1,0 +1,14 @@
+- name: Configure instances
+  hosts: all
+  become: true
+  gather_facts: true
+  vars:
+    ansible_user: ec2-user
+  tasks:
+    - name: Install Apache http
+      yum: name=httpd state=present update_cache=yes
+      become: true
+    - name: Clone a repo with separate git directory
+      copy:
+        src: ~/vue-2048/dist/
+        dest: /var/www/html 

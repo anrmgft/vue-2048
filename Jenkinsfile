@@ -50,7 +50,12 @@ pipeline {
                 sshagent(['aws-jenkins']) {
                    withAWS(credentials:'aws-sinensia-2048') {
                     //  sh 'ansible-playbook -i ansible/master/ansible/inventory ansible/master/ansible/install_docker.yml '
-                    sh 'ansible-playbook -i inventory install_docker.yml '
+                    sh 'terraform fmt'
+                    sh 'terraform init'
+                    sh 'terraform apply --auto-aprove'
+                    // sh 'ansible-playbook -i inventory install_docker.yml '
+
+                    sh 'ansible-playbook -i aws_ec2.yml ec2-provision.yml '
 
                    } 
                 }
