@@ -8,6 +8,12 @@
     - name: Install Apache http
       yum: name=httpd state=present update_cache=yes
       become: true
+    
+    - name: Start apache2 service
+      service:
+        name: httpd
+        state: started
+        
     - name: Clone a repo with separate git directory
       copy:
         src: /home/sinensia/vue-2048/dist/
